@@ -16,20 +16,20 @@ public:
            endX = rows - 1 - start;
            endY = columns - 1 - start;
         
-           for(int i = start; i <= endX; ++i)
+           for(int i = start; i <= endY; ++i)
                max_vec.push_back(matrix[start][i]);
         
-           if(start < endY)
-               for(int i = start + 1; i <= endY; ++i)
-                   max_vec.push_back(matrix[i][endX]);
+           if(start < endX)
+               for(int i = start + 1; i <= endX; ++i)
+                   max_vec.push_back(matrix[i][endY]);
         
            if(start < endX && start < endY)
-               for(int i = endX - 1; i >= start; --i)
-                   max_vec.push_back(matrix[endY][i]);
+               for(int i = endY - 1; i >= start; --i)
+                   max_vec.push_back(matrix[endX][i]);
          
         
-          if(start < endX && start < endY - 1)
-               for(int i = endY - 1; i >= start + 1; --i)
+          if(start < endY && start < endX - 1)
+               for(int i = endX - 1; i >= start + 1; --i)
                    max_vec.push_back(matrix[i][start]);
           ++start;
         }
