@@ -29,8 +29,7 @@ void ShellSort(int arr[], int n)
         for(i=0; i<gap; i++)
         {
             for(j=i+gap; j<n; j+=gap)
-                if(arr[j] < arr[j-gap])
-               {
+            {
                    temp = arr[j];
                    k = j - gap;
                    while(k>=0 && arr[k] > temp)
@@ -39,7 +38,7 @@ void ShellSort(int arr[], int n)
                        k -= gap;
                    }
                    arr[k+gap] = temp;
-               }
+            }
         }
     }
 }
