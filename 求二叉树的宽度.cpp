@@ -1,5 +1,5 @@
 int Width(Node* root)
-    {
+{
         queue<Node*> q;
         if (root)
             q.push(root);
@@ -23,4 +23,4 @@ int Width(Node* root)
             maxwidth = maxwidth > q.size() ? maxwidth : q.size();
         }
         return maxwidth;
-    }
+}
